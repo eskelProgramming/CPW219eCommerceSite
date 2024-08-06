@@ -1,6 +1,7 @@
 ﻿using CPW219eCommerceSite.Data;
 using CPW219eCommerceSite.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client.Extensions.Msal;
 
 namespace CPW219eCommerceSite.Controllers
@@ -12,6 +13,13 @@ namespace CPW219eCommerceSite.Controllers
         public GamesController(VideoGameContext context)
         {
             _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            List<Game> games = await _context.Games.ToListAsync();
+
+            return View(games);
         }
 
         [HttpGet]
