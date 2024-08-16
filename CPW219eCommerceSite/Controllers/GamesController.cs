@@ -63,7 +63,7 @@ namespace CPW219eCommerceSite.Controllers
                 _context.Games.Update(gameModel);   // Prepares update
                 await _context.SaveChangesAsync();  // Executes pending update
 
-                ViewData["Message"] = $"{gameModel.Title} was updated successfully";
+                TempData["Message"] = $"{gameModel.Title} was updated successfully";
                 return RedirectToAction("Index");
             }
             return View(gameModel);
