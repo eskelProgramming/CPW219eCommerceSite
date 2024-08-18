@@ -14,5 +14,6 @@ namespace CPW219eCommerceSite.Data
         public DbSet<Game> Games { get; set; }
 
         public DbSet<Member> Members { get; set; }
+        public DbSet<CPW219eCommerceSite.Models.RegisterViewModel> RegisterViewModel { get; set; } = default!;
     }
 }
