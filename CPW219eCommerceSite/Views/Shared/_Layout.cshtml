@@ -33,7 +33,7 @@
                         @{
                             string userEmail = _HttpContext.HttpContext.Session.GetString("Email");
                         }
-                        @if(userEmail != null)
+                        @if(userEmail == null)
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Members" asp-action="Register">Register</a>
