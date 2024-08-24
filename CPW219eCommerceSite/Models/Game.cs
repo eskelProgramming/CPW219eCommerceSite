@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace CPW219eCommerceSite.Models
 {
@@ -26,5 +27,19 @@ namespace CPW219eCommerceSite.Models
         public double Price { get; set; }
 
         // Todo: Add rating
+    }
+
+    /// <summary>
+    /// A single video game that has been added to the users
+    /// shopping cart cookie
+    /// </summary>
+    public class CartGameViewModel
+    {
+        [Key]
+        public int GameId { get; set; }
+
+        public string Title { get; set; }
+
+        public double Price { get; set; }
     }
 }

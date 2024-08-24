@@ -17,5 +17,6 @@ namespace CPW219eCommerceSite.Data
 
         public DbSet<RegisterViewModel> RegisterViewModel { get; set; } = default!;
         public DbSet<CPW219eCommerceSite.Models.LoginViewModel> LoginViewModel { get; set; } = default!;
+        public DbSet<CPW219eCommerceSite.Models.CartGameViewModel> CartGameViewModel { get; set; } = default!;
     }
 }
